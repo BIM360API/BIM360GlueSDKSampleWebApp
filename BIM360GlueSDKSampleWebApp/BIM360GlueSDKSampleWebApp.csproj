@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8F55C30C-E1C9-4C0C-B630-BA360BFF4C29}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BIM360GlueSDKSampleWebApp</RootNamespace>
+    <AssemblyName>BIM360GlueSDKSampleWebApp</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="about.aspx" />
+    <Content Include="js\jquery\plugins\jquery-ui.custom.js" />
+    <Content Include="js\jquery\plugins\jquery.cookie.js" />
+    <Content Include="js\jquery\plugins\jquery.dynatree.js" />
+    <Content Include="default.aspx" />
+    <Content Include="js\bim360.js" />
+    <Content Include="js\jquery\jquery-1.4.1-vsdoc.js" />
+    <Content Include="js\jquery\jquery-1.4.1.js" />
+    <Content Include="js\jquery\jquery-1.4.1.min.js" />
+    <Content Include="js\jquery\plugins\fbox.js" />
+    <Content Include="js\jquery\plugins\gritter.js" />
+    <Content Include="js\jquery\plugins\jquery.busy.js" />
+    <Content Include="logout.aspx" />
+    <Content Include="project.aspx" />
+    <Content Include="styles\blank.html" />
+    <Content Include="styles\contextmenu\images\adsk.png" />
+    <Content Include="styles\contextmenu\images\cut.png" />
+    <Content Include="styles\contextmenu\images\door.png" />
+    <Content Include="styles\contextmenu\images\page_white_copy.png" />
+    <Content Include="styles\contextmenu\images\page_white_delete.png" />
+    <Content Include="styles\contextmenu\images\page_white_edit.png" />
+    <Content Include="styles\contextmenu\images\page_white_paste.png" />
+    <Content Include="js\jquery\plugins\jquery.contextMenu-custom.js" />
+    <Content Include="styles\contextmenu\jquery.contextMenu.css" />
+    <Content Include="styles\dynatree\icons.gif" />
+    <Content Include="styles\dynatree\loading.gif" />
+    <Content Include="styles\dynatree\ui.dynatree.css" />
+    <Content Include="styles\images\adsk_48.png" />
+    <Content Include="styles\images\adsk_big_logo.jpg" />
+    <Content Include="styles\images\adsk_big_logo_white.jpg" />
+    <Content Include="styles\images\arrow-content.gif" />
+    <Content Include="styles\images\arrow.gif" />
+    <Content Include="styles\images\bg.png" />
+    <Content Include="styles\images\bim360_logo.png" />
+    <Content Include="styles\images\busy.gif" />
+    <Content Include="styles\images\favicon.ico" />
+    <Content Include="styles\images\fbox_background.png" />
+    <Content Include="styles\images\fbox_border_sprite.png" />
+    <Content Include="styles\images\fbox_closelabel.gif" />
+    <Content Include="styles\images\fbox_loading.gif" />
+    <Content Include="styles\images\footerlist.gif" />
+    <Content Include="styles\images\form_bg.gif" />
+    <Content Include="styles\images\gritter.png" />
+    <Content Include="styles\images\navbar.png" />
+    <Content Include="styles\images\navhover.png" />
+    <Content Include="styles\images\wrap.png" />
+    <Content Include="styles\style.css" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="about.aspx.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="about.aspx.designer.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BIM360SDKDeveloperConfig.cs" />
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BIM360SDKResponses.cs" />
+    <Compile Include="BIM360WebServiceAPI.cs" />
+    <Compile Include="logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="project.aspx.cs">
+      <DependentUpon>project.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="project.aspx.designer.cs">
+      <DependentUpon>project.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="site.master.cs">
+      <DependentUpon>site.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="site.master.designer.cs">
+      <DependentUpon>site.master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="site.master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.sitemap" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60043</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/BIM360GlueSDKSampleWebApp</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

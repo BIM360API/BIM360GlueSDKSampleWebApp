@@ -1,0 +1,111 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="site.master.cs" Inherits="BIM360GlueSDKSampleWebApp.SiteMaster" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title>BIM 360 Glue SDK Sample Web Application</title>
+    <link href="~/styles/style.css" rel="stylesheet" type="text/css" />
+    <link href="~/styles/dynatree/ui.dynatree.css" rel="stylesheet" type="text/css" />
+    <link href="~/styles/contextmenu/jquery.contextMenu.css" rel="stylesheet" type="text/css" />
+    <link rel="SHORTCUT ICON" href="~/styles/images/favicon.ico"/>
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+<!-- Necessary Javascript/JQuery Code - Load here for Performance -->
+<script language="javascript" src='<%= this.ResolveClientUrl("~/js/jquery/jquery-1.4.1.min.js") %>' type="text/javascript"></script>
+<script language="javascript" src='<%= this.ResolveClientUrl("~/js/jquery/plugins/gritter.js") %>' type="text/javascript"></script>
+<script language="javascript" src='<%= this.ResolveClientUrl("~/js/jquery/plugins/fbox.js") %>' type="text/javascript"></script>
+<script language="javascript" src='<%= this.ResolveClientUrl("~/js/jquery/plugins/jquery.busy.js") %>' type="text/javascript"></script>
+<script language="javascript" src='<%= this.ResolveClientUrl("~/js/jquery/plugins/jquery.cookie.js") %>' type="text/javascript"></script>
+<script language="javascript" src='<%= this.ResolveClientUrl("~/js/jquery/plugins/jquery-ui.custom.js") %>' type="text/javascript"></script>
+<script language="javascript" src='<%= this.ResolveClientUrl("~/js/jquery/plugins/jquery.dynatree.js") %>' type="text/javascript"></script>
+<script language="javascript" src='<%= this.ResolveClientUrl("~/js/jquery/plugins/jquery.contextMenu-custom.js") %>' type="text/javascript"></script>
+<script language="javascript" src='<%= this.ResolveClientUrl("~/js/bim360.js") %>' type="text/javascript"></script>
+
+<script type="text/javascript">
+  // Initial Page Setup
+  var glue_base_url = "<%= this.ResolveClientUrl("~/")%>";
+  jQuery().busy("defaults", { img: glue_base_url + 'styles/images/busy.gif' });
+  jQuery().busy("preload");
+</script>     
+
+<asp:ContentPlaceHolder ID="PageCode" runat="server">
+</asp:ContentPlaceHolder>
+
+
+<form id="bim360_form" runat="server">
+  <!-- START:header -->
+  <div id="header">
+    <div class="headerleft">
+  	  <a href="<%= this.ResolveClientUrl("~/default.aspx") %>"><img alt="Home" src="~/styles/images/bim360_logo.png" style="border:0;" runat="server" /></a>
+    </div>
+    <div class="headerright">
+
+      <div id="logoutHeader" class="loginDisplay" runat="server">
+      Welcome <asp:Label ID="lab_login_name" runat="server" Text="BIM 360 Glue User"></asp:Label>
+&nbsp;[<a href="<%= this.ResolveClientUrl("~/logout.aspx") %>">Log Out</a>]
+      </div>
+
+    </div>
+  </div>
+  <!-- END:header -->
+
+  <!-- clear the css -->
+  <div class="clear"></div>
+
+  <!-- START:wrap -->
+  <div id="wrap">
+  
+    <!-- START:menu -->
+      <div class="clear hideSkiplink">
+          <asp:Menu ID="NavigationMenu" CssClass="menu" runat="server" DataSourceID="SiteMapDataSource1" 
+            Orientation="Horizontal" StaticDisplayLevels="2">
+          </asp:Menu>
+
+
+          <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+      </div>
+    <!-- END:menu -->
+
+    <!-- START:content -->
+    <div id="content">
+  	  <div id="contentleft">
+
+    			<div class="post">
+            <div class="main">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+            </div>
+            <div class="clear"></div>
+          </div>
+
+      </div>
+
+      <!-- clear the css -->
+      <div class="clear"></div>
+    </div>
+    <!-- END:content -->
+
+  
+    <!-- START:footer-->
+    <div id="copyright">
+    <div class="copyright">
+      <!--#config timefmt="%Y" -->
+		  <p>&copy; <!--#echo var="DATE_LOCAL" --> Autodesk, Inc. | 
+        <a target="_blank" href="http://www.autodesk.com/products">Products</a> | 
+        <a target="_blank" href="http://www.autodesk.com/products/industries">Solutions</a> | 
+        <a target="_blank" href="http://usa.autodesk.com/adsk/servlet/index?siteID=123112&id=2910589">Partners</a> | 
+        <a target="_blank" href="http://usa.autodesk.com/company">Company</a> </p>
+    </div>
+    </div>
+    <!-- END:footer-->
+
+  <!-- END:wrap -->
+  </div>
+
+</form>
+
+
+</body>
+</html>
